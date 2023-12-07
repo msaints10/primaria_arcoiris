@@ -1,0 +1,23 @@
+{
+  "name": "primaria_arcoiris",
+  "version": "1.0.0",
+  "description": "proyecto primaria arcoiris",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "npx tailwindcss -i ./src/style.css -o ./css/estilos.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msaints10/primaria_arcoiris.git"
+  },
+  "author": "manuel santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msaints10/primaria_arcoiris/issues"
+  },
+  "homepage": "https://github.com/msaints10/primaria_arcoiris#readme",
+  "dependencies": {
+    "tailwindcss": "^3.3.6"
+  }
+}
