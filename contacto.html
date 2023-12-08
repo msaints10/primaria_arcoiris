@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primaria Arcoiris</title>
+    <meta name="author" content="Manuel Santos">
+    <meta name="description" content="Primaria Arcoiris, una escuela con valores y educación de calidad.">
+    <meta name="keywords" content="Primaria Arcoiris, Escuela, Educación, Valores, Calidad">
+
+    <!-- favicon  & iconos de otros sizes -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+        html {
+            font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-slate-50">
+    <header>
+        <nav class="bg-transparent fixed w-full z-20 top-0 start-0" id="menu-nav">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="index.html"
+                    class="flex md:order-2 items-center space-x-3 rtl:space-x-reverse hover:scale-110 transition-all delay-75">
+                    <img src="img/Logo.png" class="h-20" alt="Primaria Arcoiris Logo"
+                        style="filter: drop-shadow(0px 0px 2px #fff) !important">
+                </a>
+                <div class="flex space-x-3 mr-4 md:space-x-0 rtl:space-x-reverse">
+                    <button id="theme-toggle" type="button"
+                        class="relative inline-flex items-center justify-center p-1 mb-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600   dark:from-pink-500 dark:to-orange-400 dark:group-hover:from-pink-500 dark:group-hover:to-orange-400    hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-amber-400">
+                        <span
+                            class="relative p-1 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            <svg id="theme-toggle-dark-icon" class="hidden w-6 h-6" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                            </svg>
+                            <svg id="theme-toggle-light-icon" class="hidden w-6 h-6" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <button data-collapse-toggle="navbar-sticky" type="button"
+                        class="inline-flex items-center justify-center mx-2 w-10 h-10 rounded-lg md:hidden text-sm p-1 mb-2 overflow-hidden font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+                        aria-controls="navbar-sticky" aria-expanded="false">
+                        <span
+                            class="relative p-1.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-lg group-hover:bg-opacity-0">
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul
+                        class="flex flex-col md:bg-transparent dark:md:bg-transparent bg-slate-50 dark:bg-gray-800 p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
+                        <li>
+                            <a href="index.html"
+                                class="flex flex-col items-center justify-center align-middle h-20 w-16 text-sm text-center py-6 px-2 text-white bg-green-600 rounded ring ring-green-400 hover:bg-green-700 hover:scale-105 transition-all"
+                                aria-current="page">
+                                <span>Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="quienes_somos.html"
+                                class="flex flex-col items-center justify-center align-middle h-20 w-16 text-sm text-center py-6 px-2 text-white bg-cyan-600 rounded ring ring-cyan-500 hover:bg-cyan-700 hover:scale-105 transition-all">
+                                <span>Quienes</span>
+                                <span>Somos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mision_vision.html"
+                                class="flex flex-col items-center justify-center align-middle h-20 w-16 text-sm text-center py-6 px-2 text-white bg-amber-300 rounded ring ring-amber-200 hover:bg-amber-400 hover:scale-105 transition-all">
+                                <span>Misión</span>
+                                <span>Visión</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="nuestro_personal.html"
+                                class="flex flex-col items-center justify-center align-middle h-20 w-16 text-sm text-center py-6 px-2 text-white bg-orange-400 rounded ring ring-orange-300 hover:bg-orange-500 hover:scale-105 transition-all">
+                                <span>Nuestro</span>
+                                <span>Personal</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contacto.html"
+                                class="flex flex-col items-center justify-center align-middle h-20 w-16 text-sm text-center py-6 px-2 text-white bg-red-500 rounded ring ring-red-400 hover:bg-red-600 hover:scale-105 transition-all">
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="bg-slate-50 dark:bg-slate-900 h-screen">
+        <section>
+
+        </section>
+    </main>
+    <footer class="bg-slate-50 dark:bg-slate-900">
+        <div data-dial-init class="fixed end-6 bottom-6 group">
+            <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
+                <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left"
+                    class="flex justify-center items-center w-[52px] h-[52px] text-gray-50 hover:text-gray-50 bg-green-500 rounded-full border border-gray-200 dark:border-green-600 shadow-sm dark:hover:text-white dark:text-gray-50 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600 focus:ring-4 focus:ring-green-300 focus:outline-none dark:focus:ring-green-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                        <path
+                            d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                    </svg>
+                    <span class="sr-only">Chatea con Nosotros</span>
+                </button>
+                <div id="tooltip-share" role="tooltip"
+                    class="absolute text-center z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Chatea con Nosotros
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <button type="button" data-tooltip-target="tooltip-print" data-tooltip-placement="left"
+                    class="ir-arriba flex justify-center items-center w-[52px] h-[52px] text-gray-50 hover:text-gray-50 bg-amber-500 rounded-full border border-gray-200 dark:border-amber-600 shadow-sm dark:hover:text-white dark:text-gray-50 hover:bg-amber-600 dark:bg-amber-500 dark:hover:bg-amber-600 focus:ring-4 focus:ring-amber-300 focus:outline-none dark:focus:ring-amber-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M6 15l6 -6l6 6" />
+                    </svg>
+                    <span class="sr-only">Ir Arriba</span>
+                </button>
+                <div id="tooltip-print" role="tooltip"
+                    class="absolute text-center z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Ir Arriba
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+            <button type="button" data-dial-toggle="speed-dial-menu-default" aria-controls="speed-dial-menu-default"
+                aria-expanded="false"
+                class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+                <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 1v16M1 9h16" />
+                </svg>
+                <span class="sr-only">Open actions menu</span>
+            </button>
+        </div>
+        <div class="mx-auto max-w-screen-xl space-y-8 px-4 py-6 sm:px-6 lg:px-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <div class="flex flex-row items-center align-middle justify-center gap-6">
+                    <img src="img/Logo.png" alt="Logo Primaria Arcoiris" class="h-28 w-48"
+                        style="filter: drop-shadow(0px 0px 2px #fff) !important">
+                </div>
+                <div class="flex flex-row items-center align-middle justify-center gap-6">
+                    <img src="img/FraseB.png" alt="Logo Primaria Arcoiris" class="h-20 w-80"
+                        style="filter: drop-shadow(0px 0px 2px #fff) !important">
+                </div>
+                <ul class="mt-8 flex justify-center gap-6 sm:mt-0 sm:justify-end">
+                    <li>
+                        <a rel="noreferrer"
+                            class="text-gray-700 hover:opacity-75 cursor-pointer hover:scale-105 transition-all">
+                            <span class="sr-only">Facebook</span>
+                            <img src="img/facebook.png" class="h-16 w-14" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a rel="noreferrer"
+                            class="text-gray-700 hover:opacity-75 cursor-pointer hover:scale-105 transition-all">
+                            <span class="sr-only">Instagram</span>
+                            <img src="img/Instagram.png" class="h-16 w-14" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a rel="noreferrer"
+                            class="text-gray-700 hover:opacity-75 cursor-pointer hover:scale-105 transition-all">
+                            <span class="sr-only">Whatsapp</span>
+                            <img src="img/whatsapp.png" class="h-16 w-14" alt="Whatsapp">
+                        </a>
+                    </li>
+                    <li>
+                        <a rel="noreferrer"
+                            class="text-gray-700 hover:opacity-75 cursor-pointer hover:scale-105 transition-all">
+                            <span class="sr-only">Youtube</span>
+                            <img src="img/youtube.png" class="h-16 w-14" alt="Youtube">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="grid grid-cols-1 gap-8 border-t border-gray-100 dark:border-gray-700 pt-4 mt-2 sm:grid-cols-2 lg:grid-cols-3 lg:pt-16">
+                <div>
+                    <p class="font-medium text-gray-900 dark:text-gray-300">Nosotros</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                            <a href="quienes_somos.html"
+                                class="text-gray-700 transition hover:opacity-75 flex flex-row items-center align-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-school text-green-500" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+                                    <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+                                </svg>
+                                <span class="ml-2 dark:text-gray-400">Quiénes Somos</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mision_vision.html"
+                                class="text-gray-700 transition hover:opacity-75 flex flex-row items-center align-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-discount-check-filled text-sky-400" width="24"
+                                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113 .797l.154 .145l.698 .698a1.2 1.2 0 0 0 .71 .341l.135 .008h1a3.2 3.2 0 0 1 3.195 3.018l.005 .182v1c0 .27 .092 .533 .258 .743l.09 .1l.697 .698a3.2 3.2 0 0 1 .147 4.382l-.145 .154l-.698 .698a1.2 1.2 0 0 0 -.341 .71l-.008 .135v1a3.2 3.2 0 0 1 -3.018 3.195l-.182 .005h-1a1.2 1.2 0 0 0 -.743 .258l-.1 .09l-.698 .697a3.2 3.2 0 0 1 -4.382 .147l-.154 -.145l-.698 -.698a1.2 1.2 0 0 0 -.71 -.341l-.135 -.008h-1a3.2 3.2 0 0 1 -3.195 -3.018l-.005 -.182v-1a1.2 1.2 0 0 0 -.258 -.743l-.09 -.1l-.697 -.698a3.2 3.2 0 0 1 -.147 -4.382l.145 -.154l.698 -.698a1.2 1.2 0 0 0 .341 -.71l.008 -.135v-1l.005 -.182a3.2 3.2 0 0 1 3.013 -3.013l.182 -.005h1a1.2 1.2 0 0 0 .743 -.258l.1 -.09l.698 -.697a3.2 3.2 0 0 1 2.269 -.944zm3.697 7.282a1 1 0 0 0 -1.414 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+                                        stroke-width="0" fill="currentColor" />
+                                </svg>
+                                <span class="ml-2 dark:text-gray-400">Nuestra Misión y Visión</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="nuestro_personal.html"
+                                class="text-gray-700 transition hover:opacity-75 flex flex-row items-center align-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-users-group text-orange-500" width="24"
+                                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                    <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
+                                    <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                    <path d="M17 10h2a2 2 0 0 1 2 2v1" />
+                                    <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                                    <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
+                                </svg>
+                                <span class="ml-2 dark:text-gray-400">Nuestro Personal</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="font-medium text-gray-900 dark:text-gray-300">Datos de Contacto</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                            <a
+                                class="text-gray-700 transition hover:opacity-75 flex flex-row items-center align-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-map-pin-filled text-red-500" width="24"
+                                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z"
+                                        stroke-width="0" fill="currentColor" />
+                                </svg>
+                                <span class="ml-2 dark:text-gray-400">Ciudad de Guatemala</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="text-gray-700 transition hover:opacity-75 flex flex-row items-center align-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-mail-filled text-blue-600" width="24"
+                                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z"
+                                        stroke-width="0" fill="currentColor" />
+                                    <path
+                                        d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z"
+                                        stroke-width="0" fill="currentColor" />
+                                </svg>
+                                <span class="ml-2 dark:text-gray-400">info@primariaarcoiris.com</span>
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a
+                                class="text-gray-700 transition hover:opacity-75 flex flex-row items-center align-middle">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-phone-filled text-purple-500" width="24"
+                                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M9 3a1 1 0 0 1 .877 .519l.051 .11l2 5a1 1 0 0 1 -.313 1.16l-.1 .068l-1.674 1.004l.063 .103a10 10 0 0 0 3.132 3.132l.102 .062l1.005 -1.672a1 1 0 0 1 1.113 -.453l.115 .039l5 2a1 1 0 0 1 .622 .807l.007 .121v4c0 1.657 -1.343 3 -3.06 2.998c-8.579 -.521 -15.418 -7.36 -15.94 -15.998a3 3 0 0 1 2.824 -2.995l.176 -.005h4z"
+                                        stroke-width="0" fill="currentColor" />
+                                </svg>
+                                <span class="ml-2 dark:text-gray-400">(+502) 1111-2222</span>
+                            </a>
+                        </li>
+                        <li class="flex">
+                            <a href="contacto.html"
+                                class="text-white py-2 px-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm text-center mb-2">
+                                Formulario
+                                de
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="font-medium text-gray-900 dark:text-gray-300">Noticias</p>
+
+                    <ul class="mt-6 space-y-4 text-sm">
+                        <li>
+                            <a class="text-gray-700 transition cursor-default dark:text-gray-400"> Suscríbete a nuestro
+                                boletín de
+                                Noticias
+                            </a>
+                        </li>
+
+                        <li>
+                            <form class="mt-6 w-full">
+                                <label for="UserEmail" class="sr-only"> Email </label>
+
+                                <div
+                                    class="rounded-md border border-gray-200 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4">
+                                    <input type="email" id="UserEmail" placeholder="john@rhcp.com"
+                                        class="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm rounded-md">
+                                    <button
+                                        class="mt-1 w-full rounded px-6 py-3 text-sm font-bold uppercase tracking-wide transition-none sm:mt-0 sm:w-auto sm:shrink-0 text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700">
+                                        Suscribirme
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-2 dark:border-gray-700">
+
+            <p class="text-sm text-gray-500 dark:text-gray-200 text-center">&copy; 2023. <b
+                    class="text-green-400">Primaria Arcoiris</b>.
+                Todos los derechos
+                reservados.
+                Desarrollado por: <b class="text-blue-600">Manuel Santos</b></p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+
+        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Change the icons inside the button based on previous settings
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        var themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function () {
+
+            // toggle icons inside button
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            // if set via local storage previously
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+
+                // if NOT set via local storage previously
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+
+        });
+
+        function validarScroll() {
+            if ($(window).scrollTop() > 0) {
+                $('#menu-nav').removeClass("bg-transparent").addClass("bg-slate-50 dark:bg-slate-900");
+            } else {
+                $('#menu-nav').removeClass("bg-slate-50 dark:bg-slate-900").addClass("bg-transparent");
+            }
+        }
+
+        $(document).ready(function () {
+
+            validarScroll();
+
+            $('.ir-arriba').click(function () {
+                $('body, html').animate({
+                    scrollTop: '0px'
+                }, 300);
+            });
+
+            $(window).scroll(function () {
+                validarScroll();
+            });
+
+        });
+    </script>
+</body>
+
+</html>
