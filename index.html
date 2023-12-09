@@ -36,6 +36,14 @@
             height: 100vh;
         }
 
+        .img-arcoiris2 {
+            background-blend-mode: multiply;
+            background-color: initial !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 500px;
+        }
+
         .text-shadowblack {
             text-shadow: 0px 0px 4px #000;
         }
@@ -49,7 +57,7 @@
 
 <body class="bg-slate-50">
     <header>
-        <nav class="bg-transparent fixed w-full z-20 top-0 start-0" id="menu-nav">
+        <nav class="bg-transparent fixed w-full z-40 top-0 start-0 " id="menu-nav">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="index.html"
                     class="flex md:order-2 items-center space-x-3 rtl:space-x-reverse hover:scale-110 transition-all delay-75">
@@ -254,7 +262,7 @@
         <section id="section2" class="bg-slate-100 dark:bg-slate-900">
             <div class="mx-auto py-32 px-5 max-w-screen-xl">
                 <div class="w-full flex flex-col items-center justify-center">
-                    <span class="shrink-0 rounded-lg bg-lime-500 text-white dark:text-gray-900 p-4 mb-5">
+                    <span class="shrink-0 rounded-lg bg-lime-500 text-white p-4 mb-5">
                         <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg"
                             class="icon icon-tabler icon-tabler-star-filled" width="24" height="24" viewBox="0 0 24 24"
                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -295,7 +303,7 @@
             <div class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
                 <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
                     <div class="flex flex-col items-center align-middle justify-center text-center">
-                        <span class="shrink-0 rounded-lg bg-rose-500 text-white dark:text-gray-900 p-4 mb-5">
+                        <span class="shrink-0 rounded-lg bg-rose-500 text-white p-4 mb-5">
                             <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg"
                                 class="icon icon-tabler icon-tabler-discount-check-filled" width="24" height="24"
                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -538,10 +546,10 @@
                 </div>
             </div>
         </section>
-        <section class="bg-white dark:bg-gray-900">
+        <section id="section4" class="bg-white dark:bg-gray-900">
             <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                 <div class="flex flex-col items-center align-middle justify-center text-center">
-                    <span class="shrink-0 rounded-lg bg-yellow-500 text-white dark:text-gray-900 p-4 mb-5">
+                    <span class="shrink-0 rounded-lg bg-yellow-500 text-white p-4 mb-5">
                         <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg"
                             class="icon icon-tabler icon-tabler-pig-money" width="24" height="24" viewBox="0 0 24 24"
                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -744,6 +752,99 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section id="section5" class="bg-cyan-200 dark:bg-slate-800">
+            <div class="py-8 px-4 mx-auto my-20 max-w-screen-xl lg:py-16 lg:px-6">
+                <div class="flex flex-col items-center align-middle justify-center text-center">
+                    <span class="shrink-0 rounded-lg bg-sky-500 text-white p-4 mb-5">
+                        <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-mood-heart" width="24" height="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M21 12a9 9 0 1 0 -8.012 8.946" />
+                            <path d="M9 10h.01" />
+                            <path d="M15 10h.01" />
+                            <path d="M9.5 15a3.59 3.59 0 0 0 2.774 .99" />
+                            <path
+                                d="M18.994 21.5l2.518 -2.58a1.74 1.74 0 0 0 .004 -2.413a1.627 1.627 0 0 0 -2.346 -.005l-.168 .172l-.168 -.172a1.627 1.627 0 0 0 -2.346 -.004a1.74 1.74 0 0 0 -.004 2.412l2.51 2.59z" />
+                        </svg>
+                    </span>
+                    <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-indigo-950 dark:text-indigo-300">
+                        Explora Nuestra Vida Escolar
+                    </h2>
+                    <p class="mb-5 sm:text-xl text-indigo-950 dark:text-indigo-300">
+                        Explora nuestra vida escolar a través de momentos cautivadores capturados en nuestra Galería
+                        Escolar. Descubre la esencia de Primaria Arcoíris en imágenes llenas de energía, amistad y
+                        aprendizaje.
+                    </p>
+                    <p class="mb-5 font-bold sm:text-xl text-indigo-950 dark:text-indigo-300">
+                        ¡Sumérgete en la experiencia única que ofrecemos a cada estudiante!
+                    </p>
+                </div>
+                <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="/img/nino1.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                            <img src="/img/nino2.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="/img/nino3.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="/img/nino4.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                        <!-- Item 5 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="/img/nino5.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
                 </div>
             </div>
         </section>
