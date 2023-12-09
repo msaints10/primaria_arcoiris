@@ -129,7 +129,7 @@
         </nav>
     </header>
     <main class="bg-cyan-200 dark:bg-slate-900">
-        <section id="landing" class="img-arcoiris brightness-100 dark:brightness-70"
+        <section id="section1" class="img-arcoiris brightness-100 dark:brightness-70"
             style="background-image: url(img/Arcoiris.png) !important;">
             <div class="h-screen">
                 <div id="animation-carousel" class="relative w-full px-20 pt-32" data-carousel="auto">
@@ -228,7 +228,7 @@
                     </button>
                 </div>
                 <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-                    <a href="#"
+                    <a href="#UnicosEspeciales"
                         class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-slate-50 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-slate-200 dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                         <span
                             class="relative inline-flex items-center justify-center align-middle px-5 py-2.5 transition-all ease-in duration-75 bg-transparent dark:bg-transparent rounded-md group-hover:bg-opacity-0">
@@ -247,6 +247,47 @@
                             </svg>
                         </span>
                     </a>
+                </div>
+            </div>
+        </section>
+        <a name="UnicosEspeciales"></a>
+        <section id="section2" class="bg-slate-100 dark:bg-slate-900">
+            <div class="mx-auto py-32 px-5 max-w-screen-xl">
+                <div class="w-full flex flex-col items-center justify-center">
+                    <span class="shrink-0 rounded-lg bg-amber-500 text-white dark:text-gray-900 p-4 mb-5">
+                        <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-star-filled" width="24" height="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z"
+                                stroke-width="0" fill="currentColor" />
+                        </svg>
+                    </span>
+
+                    <h2 class="text-3xl text-center font-bold sm:text-4xl text-violet-700 dark:text-violet-500">
+                        <a href="#UnicosEspeciales">
+                            ¿Qué nos hace únicos y especiales?
+                        </a>
+                    </h2>
+
+                    <p class="mt-8 w-8/12 text-center text-gray-500 dark:text-gray-300 text-lg">
+                        En la <b class="text-blue-400">Primaria Arcoíris</b>, nos enorgullece ofrecer una experiencia
+                        educativa única y enriquecedora que va más allá de lo convencional.
+                    </p>
+                    <hr class="w-48 h-1 mx-auto my-8 bg-violet-700 dark:bg-violet-500 border-0 rounded">
+                    <p class="w-8/12 text-center text-gray-500 dark:text-gray-300 text-lg">
+                        Nos esforzamos por ser especiales en cada detalle, desde la forma en que abordamos la enseñanza
+                        hasta la variedad de materias que ofrecemos para cultivar mentes curiosas y creativas.
+                    </p>
+                    <a href="quienes_somos.html"
+                        class="mt-8 text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                        Descubre quienes somos
+                    </a>
+                </div>
+                <div class="flex items-center justify-center align-middle">
+                    <img src="img/Materias1.png" alt="Materias Logo">
                 </div>
             </div>
         </section>
@@ -632,13 +673,13 @@
 
             // callback functions
             onNext: () => {
-                console.log('next slider item is shown');
+                // console.log('next slider item is shown');
             },
             onPrev: () => {
-                console.log('previous slider item is shown');
+                // console.log('previous slider item is shown');
             },
             onChange: () => {
-                console.log('new slider item has been shown');
+                // console.log('new slider item has been shown');
             },
         };
 
